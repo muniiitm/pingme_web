@@ -1,7 +1,7 @@
 class CreateAssociates < ActiveRecord::Migration
   def change
     create_table :associates do |t|
-      t.integer :associate_id
+      t.integer :user_id
       t.string :first_name
       t.string :last_name
       t.string :email
