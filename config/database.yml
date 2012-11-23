@@ -15,7 +15,7 @@ development:
   database: pingme_web_development
   pool: 5
   username: root
-  password: p@55w0rd
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
