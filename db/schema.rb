@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20121123035305) do
   end
 
   create_table "associates", :force => true do |t|
-    t.integer  "associate_id"
+    t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
