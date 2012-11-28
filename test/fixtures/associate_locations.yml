@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  associate_id: 1
+  location_id: 1
+  vnet: 1
+  seat_number: MyString
+  start_date: 2012-11-23 09:20:13
+  end_date: 2012-11-23 09:20:13
+
+two:
+  associate_id: 1
+  location_id: 1
+  vnet: 1
+  seat_number: MyString
+  start_date: 2012-11-23 09:20:13
+  end_date: 2012-11-23 09:20:13

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  associate_id: 1
+  location_id: 1
+  login_ip: MyString
+  login_latitude: 1.5
+  login_longitude: 1.5
+
+two:
+  associate_id: 1
+  location_id: 1
+  login_ip: MyString
+  login_latitude: 1.5
+  login_longitude: 1.5

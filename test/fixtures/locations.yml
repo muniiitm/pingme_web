@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyText
+  city: MyString
+  state: MyString
+  country: MyString
+  pincode: MyString
+  latitude: 1.5
+  longitude: 1.5
+  geocoder_service: MyString
+  user_defined: false
+
+two:
+  address: MyText
+  city: MyString
+  state: MyString
+  country: MyString
+  pincode: MyString
+  latitude: 1.5
+  longitude: 1.5
+  geocoder_service: MyString
+  user_defined: false

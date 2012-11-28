@@ -1,0 +1,31 @@
+<%= form_tag new_location_path do %>
+	<p>Where are you GOING Today? We find associates in your location exclusively for YOU!</p>
+	<p>
+	<%= text_field_tag "country", "", :placeholder => "Country"%>
+	<%= text_field_tag "state", "", :placeholder => "State" %>
+	<%= text_field_tag "city", "", :placeholder => "City" %>
+	<%= text_field_tag "location", "", :placeholder => "Location" %>
+	</p>
+	<p> <%= submit_tag "Update Details" %> <p>
+
+	<p>How you will be here in this location?</p>
+
+	<p> 
+
+		<%= check_box_tag "today" %> Today Only | <%= check_box_tag "today" %> A Week 
+		<span>
+		 <%= render :file => "layouts/datepicker", :locals => {:name => "start_date"} %>
+		  <%= render :file => "layouts/datepicker", :locals => {:name => "end_date"} %>
+		</span>
+	</p>
+
+	<p>Add more details (Helps associates to reach you quickly)</p>
+	<p>
+		<%= text_field_tag "seat_number", "", :placeholder => "Seat Number"%>
+		<%= text_field_tag "vnet", "", :placeholder => "Vnet"%>
+		<%= text_field_tag "contact_phone", "", :placeholder => "Contact Phone"%>
+	</p>
+<% end %>
+<script type="text/javascript">  	
+	$('#state').typeahead({source: <%=raw @locations %>});
+</script>
