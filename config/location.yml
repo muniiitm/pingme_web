@@ -1,0 +1,401 @@
+location_ch1:
+  address: 5/535 Old Mahabalipuram Road Thoraipakkam
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 600086
+
+location_ch2:
+  address: No 148 Asv Suntech Park, Mettukuppam, OMR Road, Thoraipakkam
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 600096
+  
+location-ch3:
+  address: Plot No B 40 41 & 44, Sipcot IT Park, Old Mahabalipuram Road, Sirucheri
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 603103
+  
+location_ch4: 
+  address: 63/1&2, Old Mahabalipuram, Navalur
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 603103
+  
+location_ch5:
+  address: Plot No A-15, 16, 17 (Part) B-20, C-10 & C-1 and D-2, NH45, Tambaram, GST Road
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 600045
+    
+location_ch6:
+  address: S.No 56/3A, 56/3B, 56/5A & 56/5B, Pallikaranai Village, Thoraippakkam Pallavaram 200 Feet Road, Pallikaranai
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 601302
+
+location_ch7:
+  address: DLF Info City, Block 1-C, 2nd, 3rd & 4th Floor,1/124 Sivaji Gardens,Mount Ponnamalee High Road,Manapakkam
+  city: chennai
+  state: tamilnadu
+  country: india
+  pincode: 600089
+  
+location_karnataka:
+  address: Baghmane Tech Park, 65/2 -1, Adj LRDE, Byrasandra,C.V.Raman Nagar
+  city: Karnataka
+  state: Karnataka
+  country: india
+  pincode: 700091
+  
+location_pune:
+  address: Plot # 26, Rajiv Gandhi Infotech Park, MIDC, Hinjawadi
+  city: Hinjawadi
+  state: pune
+  country: india
+  pincode: 411057
+  
+location_hyd:
+  address: 3rd Floor, H Building, Vanenburg IT Park, Software Units Layout
+  city: Madhapur
+  state: Hyderabad
+  country: india
+  pincode: 500081
+  
+location_kerala:
+  address: Plot No. 1, Cochin Special Economic Zone, 3rd floor, Technopolis, Kakkanad
+  city: Cochin
+  state: kerala
+  country: india
+  pincode: 682037
+  
+location_kolkata:
+  address: Technocomplex Plot GN-34/3, Sector-V Saltlake Electronic Complex
+  city: Kolkata
+  state: Kolkata
+  country: india
+  pincode: 700091
+  
+location1:
+  address: Mountain View Campus, STPI - IT Park Kumaraguru College of Technology
+  city: coimbatore
+  state: coimbatore
+  country: india
+  pincode: 641006
+  
+location_mumbai:
+  address: 13th, Kensington SEZ, Hiranandani Business Park
+  city: Powai
+  state: Mumbai
+  country: india
+  pincode: 400076
+  
+location_haryana:
+  address: Signature Towers - RX - 508, 15th Floor Tower B,South City-1 Gurgaon
+  city: Gurgaon
+  state: Haryana
+  country: india
+  pincode: 122022
+
+location_melbourne:
+  address: Australia Pty Ltd Level 2, 437 St Kilda Road, Melbourne, VIC, 3004
+  city: Melbourne
+  state: VIC
+  country: Australia
+  pincode: 3004
+
+location_sydney:
+  address: Australia Pty Ltd Level 15 14 Martin Place Sydney, NSW, 2000
+  city: Sydney
+  state: NSW
+  country: Australia
+  pincode: 2000
+
+location_wellington:
+  address: NZ Ltd Level 20, Plimmer Towers 2-6 Gilmer Terrace Wellington, 6011
+  city: Wellington
+  state: Wellington
+  country: New Zealand
+  pincode: 6011
+
+location_auckland:
+  address: NZ Ltd Plaza Level 41 Shortland Street Auckland, 1010
+  city: Auckland
+  state: Auckland
+  country: New Zealand
+  pincode: 1010
+
+location_china:
+  address: No. 538 Cailun Road, Zhangjiang Hi-Tech Park, Shanghai
+  city: Shanghai
+  state: Shanghai
+  country: China
+  pincode: 201203
+
+location_hk:
+  address: 62/F, Suite 6201, The Center, 99 Queens Road, Central
+  city: Hong Kong
+  state: Hong Kong
+  country: Hong Kong
+  pincode: 
+
+location_tokyo:
+  address: Cognizant Japan KK 2F, Kojimachi Miyuki Bldg. 3-4, Ni-bancho, Chiyoda-ku
+  city: Tokyo
+  state: Tokyo
+  country: Japan
+  pincode: 1020084
+
+location_osaka:
+  address: Cognizant Japan KK 20F, Hankyu Grand Bldg, 8-47, Kakuta-cho, Kita-ku
+  city: Osaka
+  state: Osaka
+  country: Japan
+  pincode: 5300017
+
+location_malaysia:
+  address: COGDEV Sdn Bhd Unit LG-02, SME Technopreneur Center 3 (SME3) Block 3740, Persiaran APEC, Cyber 8, 63500 Cyberjaya
+  city: Selangor Darul Ehsan
+  state: Selangor Darul Ehsan
+  country: Malaysia
+  pincode: 
+  
+location_pp:
+  address: 5th & 6th Floor, 10 Upper Mckinley Building, McKinley Hills, Fort Bonifacio
+  city: Taguig
+  state: Taguig
+  country: Philippines
+  pincode: 1634
+
+location_singapore:
+  address: Asia Pacific Pte Ltd 80 Anson Road #27-02/03 Fuji Xerox Towers
+  city: Singapore
+  state: Singapore
+  country: Singapore
+  pincode: 079907
+
+location_thailand:
+  address: Q House Lumpini Level 27, 1 South Sathorn Rd. Tungmahamek, Sathorn
+  city: Bangkok
+  state: Bangkok
+  country: Thailand
+  pincode: 10120
+  
+location_singapore:
+  address: Asia Pacific Pte Ltd 80 Anson Road #27-02/03 Fuji Xerox Towers
+  city: Bangkok
+  state: Bangkok
+  country: Thailand
+  pincode: 10120
+
+location_belgium:
+  address: Buro & Design Center Esplanade 1, box 41 1020 Brussels
+  city: Brussels
+  state: Brussels
+  country: Belgium
+  pincode: 1020
+
+location_denmark:
+  address: Cognizant Technology Solutions , Toldbodgade 18, 1253 Copenhagen K
+  city: Copenhagen K
+  state: Copenhagen K
+  country: Denmark
+  pincode: 1253
+
+
+location_finland:
+  address: Cognizant Technology Solutions Finland OY  Luna House, Mannerheimintie 12B FI-00100 Helsinki
+  city: Suomi
+  state: Suomi
+  country: Finland
+  pincode: 
+
+location_france:
+  address: 1-3, rue du Chateau 92200 Neuilly-sur-Seine
+  city: Neuilly-sur-Seine
+  state: Neuilly-sur-Seine
+  country: France
+  pincode: 92200
+
+location_france1:
+  address: Office in Lyon 3, cours Charlemagne BP 2597
+  city: Lyon cedex 02
+  state: Lyon cedex 02
+  country: France
+  pincode: 69217
+  
+location_france2:
+  address: Office in Grenoble 3, avenue doyen Louis Weil
+  city: Grenoble Cedex 1
+  state: Grenoble Cedex 1
+  country: France
+  pincode: 38025  
+ 
+location_germany:
+  address: Torhaus Westhafen Speicherstrasse 57-59
+  city: Frankfurt am Main
+  state: Frankfurt am Main
+  country: Germany
+  pincode: 60327  
+  
+location_Hungary:
+  address: Cognizant Technology Solutions Hungary Kft. Arena Corner, Hungaria krt. 40-44
+  city: Budapest
+  state: Budapest
+  country: Hungary
+  pincode: H-1087  
+
+location_Ireland:
+  address: Harcourt Centre Harcourt Road Dublin 2
+  city: Dublin
+  state: Dublin
+  country: Ireland
+  pincode: 2
+
+location_Norway:
+  address: Karenslyst alle 8 B 0278 Oslo
+  city: Oslo
+  state: Oslo
+  country: Norway
+  pincode: 0278
+
+location_Spain:
+  address: Edificio Cuzco IV Paseo de Castellana 141, 8th Planta Madrid 28046
+  city: Madrid
+  state: Madrid
+  country: Spain
+  pincode: 28046
+
+location_Sweden:
+  address: Kungsbron 1, uppgang G2, 111 22 STOCKHOLM
+  city: 
+  state:  
+  country: Sweden
+  pincode: 28046
+
+location_Switzerland:
+  address: Cognizant Technology Solutions AG Hohlstrasse 560 8048 Zurich
+  city: Zurich
+  state:  
+  country: Switzerland
+  pincode: 8048
+  
+location_Netherlands:
+  address: Cognizant Technology Solutions SA Av. Industrielle 4-6
+  city: Carouge (GE)
+  state:  
+  country: The Netherlands
+  pincode: 1227
+
+
+location_Netherlands1:
+  address: Zuidplein 54 1077 XV Amsterdam
+  city: 
+  state:  
+  country: The Netherlands
+  pincode: 
+
+location_uk:
+  address: UK Headquarters 1 Kingdom Street Paddington Central London  W2 6BD
+  city: London  W2 6BD
+  state:  
+  country: United Kingdom
+  pincode: 
+
+location_uk1:
+  address: 5 Harbour Exchange Square London E14 9GE
+  city: London E14 9GE
+  state:  
+  country: United Kingdom
+  pincode: 
+
+location_uk2:
+  address: 5 Harbour Exchange Square London E14 9GE
+  city: London E14 9GE
+  state:  
+  country: United Kingdom
+  pincode: 
+
+location_Argentina:
+  address: Torre Intercontinental Plaza Moreno 877, piso 7 Buenos Aires, (C1091AAQ)
+  city: 
+  state:  
+  country: Argentina
+  pincode: 
+
+location_Mexico:
+  address: Cognizant Technology Solutions de Mexico SA de CV Av. Real Acueducto 360-A 5to Piso Puerta de Hierro Zapopan, Jalisco, C.P. 45116
+  city: 
+  state:  
+  country: Mexico
+  pincode: 
+ 
+location_Mexico:
+  address: Cognizant Technology Solutions de Mexico SA de CV Av. Insurgentes Sur 1605, Piso 12, Mod 3 San Jose Insurgentes, Distrito Federal C.P. 03900
+  city: 
+  state:  
+  country: Mexico
+  pincode: 
+
+location_Dubai:
+  address: Office No. 2301, Al Thuraya Tower 2 Dubai Internet City
+  city: Dubai
+  state:  Dubai
+  country: United Arab Emirates
+  pincode: 500378
+
+location_ksa:
+  address: 28th Floor, Kingdom Tower, PO Box 230888, Riyadh 11321
+  city: Riyadh
+  state:  Dubai
+  country: Kingdom of Saudi Arabia
+  pincode: 11321
+
+location_Canada:
+  address: Cognizant Technology Solutions, 5140 Yonge Street 7th Floor, North York Center, Toronto ON M2N 6X7
+  city: Toronto
+  state:  Toronto
+  country: Canada
+  pincode: 
+ 
+location_USA:
+  address: 2512 West Dunlap, Phoenix, AZ 85021
+  city: AZ
+  state:  AZ
+  country: USA
+  pincode: 85021
+
+location_California:
+  address: 5000 Executive Parkway #295, San Ramon, CA 94583
+  city: CA
+  state:  CA
+  country: USA
+  pincode: 94583
+
+location_California:
+  address: 8001 Irvine Center Drive, Suite 400, Irvine, CA 92618
+  city: CA
+  state:  CA
+  country: USA
+  pincode: 92618
+
+location_mausa:
+  address: 125 Jeffrey Avenue, Holliston, MA 01746
+  city: MA
+  state:  MA
+  country:  USA
+  pincode:  01746  
+
+
+
+
+
+
+
+
