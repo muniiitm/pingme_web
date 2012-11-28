@@ -7,7 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'mysql2'
 
-
+gem 'httparty'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -39,3 +39,10 @@ gem 'thin'
 
 # To use debugger
 # gem 'debugger'
+group :test do
+	  gem 'rspec-rails'
+	  gem 'cucumber-rails'
+    gem 'cucumber'
+	  gem 'capybara'
+	  gem 'database_cleaner'
+	end
