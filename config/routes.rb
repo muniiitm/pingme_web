@@ -5,6 +5,11 @@ PingmeWeb::Application.routes.draw do
 
   get "reports/google_map"
 
+  resources :locations  
+  resources :associates
+
+  post 'associates/login'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
