@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+location_read = Rails.root.join("config", "location.yml")
+locations = YAML.load_file(location_read)
+locations.each do |key,value|
+  Location.create!(value)
+end
