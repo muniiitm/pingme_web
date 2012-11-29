@@ -7,9 +7,8 @@ PingmeWeb::Application.routes.draw do
 
   resources :locations  
   resources :associates
+  resources :sessions
 
-  post 'associates/login'
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
