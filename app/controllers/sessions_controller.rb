@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
 	def new    
-    redirect_to locations_path if session[:access_token]
+    redirect_to locations_path if current_user
 	end
 
 	def create    
