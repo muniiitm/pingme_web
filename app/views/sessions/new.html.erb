@@ -1,7 +1,7 @@
-<%= form_tag '/sessions', :method => "post" do %>
+<%= form_tag sessions_path, :method => "post" do %>
 <p>
 <%= text_field_tag "user_id", "", :placeholder => "Associate ID"%>
-<%= text_field_tag "password", "", :placeholder => "Password" %>
+<%= password_field_tag "password", "", :placeholder => "Password" %>
 </p>
 
 <p> <%= check_box_tag "agree" %> Agree to pull my information from Cognizant system <p>

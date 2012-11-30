@@ -1,3 +1,3 @@
 class Associate < ActiveRecord::Base
-  attr_accessible :associate_id, :email, :first_name, :last_name
+  attr_accessible :user_id
 end

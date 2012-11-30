@@ -1,18 +1,30 @@
 class SessionsController < ApplicationController
 
-	def new
+	def new    
+    redirect_to locations_path if session[:access_token]
 	end
 
-	def create
+	def create    
     value=Base64.encode64("#{params[:user_id]} #{params[:password]}")
     # move to intilizers
-    response=HTTParty.post("http://localhost:9393" +'/users/sign_in',{:body=>JSON.parse({:user=>value}.to_json)})
-    response = JSON.parse(response.body)
-    if response["response"]=="success"
-      session[:access_token] = response["user"]["authentication_token"]
+    response=HTTParty.post("http://localhost:9292/users/sign_in",{:body=>JSON.parse({:user=>value}.to_json)})
+    response = JSON.parse(response.body)    
+    
+    if response["status"] == "success"
+      session[:user_id] = response["user"]["user_id"]
+      session[:access_token] = response["access_token"]
       cookies.signed[access_token]
-      set_current_user
+      # set the current user
+      current_user 
+      redirect_to locations_path # redirect to location URL
+    else
+      redirect_to new_session_path 
     end
+    
+  end
 
+  def sign_out
+    reset_session
+    redirect_to new_sessions_path 
   end
 end

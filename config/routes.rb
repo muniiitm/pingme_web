@@ -7,7 +7,9 @@ PingmeWeb::Application.routes.draw do
 
   resources :locations  
   resources :associates
-  resources :sessions
+  resource :sessions 
+
+  get 'sessions/sign_out'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +60,7 @@ PingmeWeb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'reports#carousel'
+  root :to => 'sessions#new'
 
   # See how all your routes lay out with "rake routes"
 
