@@ -2,8 +2,12 @@ class LocationsController < ApplicationController
 
 	before_filter :authenticate
 
-	def index	
-		@locations = []
+	def index			
+		locations = Location.all
+
+		@countries = locations.map(&:country).uniq.reject { |c| c.nil? }
+		@states = locations.map(&:state).uniq.reject { |s| s.nil? }
+		@cities = locations.map(&:city).uniq.reject { |c| c.nil? }
 	end
 
 	def create				

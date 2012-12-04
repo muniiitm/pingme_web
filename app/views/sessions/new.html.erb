@@ -1,8 +1,8 @@
 <%= form_tag sessions_path, :name => "associate_login_frm", :id => "associate_login_frm", :method => "post" do %>
 <p>
-<%= text_field_tag "user_id", "", :placeholder => "Associate ID"%>
+<%= text_field_tag "user_id", "", :placeholder => "Associate ID", :class => "required"%>
 <span id="username_warning" style="color:red"></span> 
-<%= password_field_tag "password", "", :placeholder => "Password" %>
+<%= password_field_tag "password", "", :placeholder => "Password", :class => "required" %>
 <span id="password_warning" style="color:red"></span>
 </p>
 
@@ -11,45 +11,3 @@
 <p> <%= submit_tag "Let me USE!", :type => "submit" %> <%= submit_tag "I am not READY!", :type => "reset" %> <p>
 
 <% end %>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-
-
-    $("#theform").submit(function(){
-
-02.//Validate required fields
-03.for (i=0;i<required.length;i++) {
-04.var input = $('#'+required[i]);
-05.if ((input.val() == "") || (input.val() == emptyerror)) {
-06.input.addClass("needsfilled");
-07.input.val(emptyerror);
-08.errornotice.fadeIn(750);
-09.} else {
-10.input.removeClass("needsfilled");
-11.}
-12.}
-
-    $("#user_id").blur(function() 
-    { 
-        var username_length; 
- 
-        username_length = $("#txt_username").val().length; 
-        $("#username_warning").empty(); 
- 
-        if (username_length <= 0) 
-            $("#username_warning").append("Username should not be empty"); 
-    }); 
- 
-    $("#password").blur(function() 
-    { 
-        var password_length; 
- 
-        password_length = $("#txt_password").val().length; 
-        $("#password_warning").empty(); 
- 
-        if (password_length <= 0) 
-            $("#password_warning").append("Password should not be empty"); 
-    }); 
-});
-</script>

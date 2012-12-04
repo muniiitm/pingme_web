@@ -12,6 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.validate
 //= require bootstrap-typeahead
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(document).ready(function () {               
+    form_id = $('form').attr('id');
+    $("#"+form_id).validate();
+});

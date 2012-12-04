@@ -1,11 +1,11 @@
 <div style="float: left;">
-	<%= form_tag locations_path do %>
+	<%= form_tag locations_path, :id => "associate_location_frm", :name => "associate_location_frm" do %>
 		<p>Where are you GOING Today? We find associates in your location exclusively for YOU!</p>
 		<p>
-		<%= text_field_tag "country", "", :placeholder => "Country"%>
-		<%= text_field_tag "state", "", :placeholder => "State" %>
-		<%= text_field_tag "city", "", :placeholder => "City" %>
-		<%= text_field_tag "location", "", :placeholder => "Location" %>
+		<%= text_field_tag "country", "", :placeholder => "Country", :class => "required" %>
+		<%= text_field_tag "state", "", :placeholder => "State", :class => "required" %>
+		<%= text_field_tag "city", "", :placeholder => "City", :class => "required" %>
+		<%= text_field_tag "location", "", :placeholder => "Location", :class => "required" %>
 		</p>
 		<p> <%= submit_tag "Update Details" %> <p>
 
@@ -27,7 +27,10 @@
 			<%= text_field_tag "contact_phone", "", :placeholder => "Contact Phone"%>
 		</p>
 	<% end %>
-	<script type="text/javascript">  	
-		$('#state').typeahead({source: <%=raw @locations %>});
+
+	<script type="text/javascript">  			
+		$('#country').typeahead({source: <%=raw @countries %>});
+		$('#state').typeahead({source: <%=raw @states %>});
+		$('#city').typeahead({source: <%=raw @cities %>});
 	</script>
 </div>
