@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
     # move to intilizers
     response=HTTParty.post(API_HOST+"/users/sign_in",{:body=>JSON.parse({:user=>value}.to_json)})
     response = JSON.parse(response.body)        
-    
+
     if response["status"] == "success"
-      session[:user_id] = response["user"]["user_id"]
+      session[:user_id] = response["user"]["associate"]["user_id"]
       session[:access_token] = response["access_token"]
       cookies.signed[access_token]
       # set the current user

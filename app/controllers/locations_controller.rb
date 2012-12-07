@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-  before_filter :authenticate
+before_filter :authenticate
 	respond_to :json, :html
 
 	def index 		
@@ -14,7 +14,7 @@ class LocationsController < ApplicationController
     # move to intilizers
     response=HTTParty.post(API_HOST+"/associates/location",{:body=>JSON.parse({:user=>params, :access_token => "#{session[:access_token]}"}.to_json)})
     response = JSON.parse(response.body)        
-    
+
     if response["status"] == "success"
 	    flash[:notice] = APP_MESSAGE["location_success"] 
 	    redirect_to new_location_path
@@ -30,11 +30,6 @@ class LocationsController < ApplicationController
 
 		assd = AssociateLocation.where("location_id = #{@locations.id}").group("associate_id").order("created_at")
 		@associates = Associate.where(["id in (?)", assd.map(&:associate_id)])
-
-		puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22"
-		puts @locations_json
-
-
 	end
 
 	private 
