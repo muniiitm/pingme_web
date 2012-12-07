@@ -5,7 +5,12 @@ PingmeWeb::Application.routes.draw do
 
   get "reports/google_map"
 
-  resources :locations  
+  resources :locations do
+    collection do 
+      get 'search'      
+    end
+  end
+
   resources :associates
   resource :sessions 
 

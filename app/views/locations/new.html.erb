@@ -28,7 +28,8 @@
 		</p>
 	<% end %>
 
-	<script type="text/javascript">  			
+	<script type="text/javascript">  	
+		$('#location').typeahead({source: <%=raw @addresses %>});		
 		$('#country').typeahead({source: <%=raw @countries %>});
 		$('#state').typeahead({source: <%=raw @states %>});
 		$('#city').typeahead({source: <%=raw @cities %>});

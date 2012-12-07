@@ -1,0 +1,20 @@
+<div style="float: left;">
+	<%= form_tag locations_path, :id => "associate_location_search_frm", :name => "associate_location_frm" do %>
+		<p>Looking for associates in a specific location?</p>
+		<p>
+			<%= text_field_tag "country", "", :placeholder => "Country" %>
+			<%= submit_tag "Search" %> 
+		</p>
+	<% end %>
+	<script type="text/javascript">  			
+		$('#country').typeahead({source: <%=raw @countries %>});		
+	</script>
+</div>
+
+<p>
+
+<% @associates.each do |associate| %>
+	<%= associate.first_name %>
+<% end %>
+
+</p>

@@ -1,4 +1,10 @@
 class Location < ActiveRecord::Base
-  attr_accessible  :address,:city,:state,:country,:pincode,:latitude,:longitude, :geocoder_service,:user_defined
+	acts_as_gmappable
+  attr_accessible :address  
+
+  def gmaps4rails_address
+    address
+  end  
+
 end
 

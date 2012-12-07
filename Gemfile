@@ -25,6 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'thin'
+gem 'gmaps4rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -45,4 +46,4 @@ group :test do
     gem 'cucumber'
 	  gem 'capybara'
 	  gem 'database_cleaner'
-	end
+end
