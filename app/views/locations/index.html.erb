@@ -1,0 +1,31 @@
+<div style="float: left;">
+	<%= form_tag "/locations/search_result", :id => "associate_location_search_frm", :name => "associate_location_frm" do %>
+		<p>Looking for associates in a specific location?</p>
+		<p>
+			<%= text_field_tag "search[associate_name]", "", :placeholder => "What (Associate Name)" %>
+			<%= text_field_tag "search[time_period]", "", :placeholder => "when (today/This week/ Next week)" %>
+			<%= text_field_tag "search[location]", "", :placeholder => "@chennai @TCO " %>  
+      <input type = "submit" value = "Search"  class="search_location"/>
+		</p>
+	<% end %>
+	<script type="text/javascript">  			
+		$('#country').typeahead({source: <%=raw @countries %>});		
+	</script>
+</div>
+<br/>
+<p id ="display_result"></p>
+
+<script>
+$(document).ready(function(){
+  $(document).on('click', '.search_location',  function(e) {
+    var form = $(this).closest('form');
+    $.ajax({url: "/locations/search_result",type: 'post',datatype: "json",data: form.serialize(),success: function(response){
+    $('#display_result').html(response);
+    }
+    });
+      return false;
+  });
+
+});
+</script>
+

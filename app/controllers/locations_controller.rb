@@ -34,13 +34,11 @@ class LocationsController < ApplicationController
   	end
 	end
 
-	def search		
-		location_obj
-		@locations = Location.find(:first, :conditions => "country = 'india'")
-
-		assd = AssociateLocation.where("location_id = #{@locations.id}").group("associate_id").order("created_at")
-		@associates = Associate.where(["id in (?)", assd.map(&:associate_id)])
-	end
+  def search_result
+    response=HTTParty.get(API_HOST+"/locations",{:body=>JSON.parse({:search=>params[:search], :access_token => "#{session[:access_token]}"}.to_json)})
+    response = JSON.parse(response)
+    render :partial => "locations/search_result",:locals=>{:associates=>response}
+  end
 
 	private
 	
