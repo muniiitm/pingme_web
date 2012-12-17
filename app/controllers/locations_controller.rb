@@ -22,11 +22,13 @@ class LocationsController < ApplicationController
 	def create				
     # move to intilizers
     response=HTTParty.post(API_HOST+"/associates/location",{:body=>JSON.parse({:user=>params, :access_token => "#{session[:access_token]}"}.to_json)})
-    response = JSON.parse(response.body)        
-
+    response = JSON.parse(response.body)            
     if response["status"] == "success"    	
 	    flash[:notice] = APP_MESSAGE["location_success"] 
 	    redirect_to new_location_path
+	  elsif response["status"] == "date_field_empty"
+	  	flash[:notice] = APP_MESSAGE["date_field_empty"] 
+	  	redirect_to new_location_path
   	else
   		token_mismatch
   	end

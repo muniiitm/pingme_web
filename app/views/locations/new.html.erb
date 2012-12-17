@@ -13,7 +13,7 @@
 
 		<p> 
 
-			<%= check_box_tag "today" %> Today Only | <%= check_box_tag "today" %> A Week 
+			<%= radio_button_tag "date_range", "today" %> Today Only | <%= radio_button_tag "date_range", "week"  %> A Week 
 			<span>
 			 <%= render :file => "layouts/datepicker", :locals => {:name => "start_date"} %>
 			  <%= render :file => "layouts/datepicker", :locals => {:name => "end_date"} %>
