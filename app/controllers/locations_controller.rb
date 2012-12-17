@@ -4,19 +4,11 @@ class LocationsController < ApplicationController
 	respond_to :json, :html
 
 	def index 		
+		location_data_for_populate
 	end
 
 	def new
-		response=HTTParty.get(API_HOST+"/locations",{:body=>JSON.parse({:access_token => "#{session[:access_token]}"}.to_json)})
-    response = JSON.parse(response.body)    
-    if response["status"] == "success" 
-    	@addresses = response["addresses"]
-    	@countries = response["countries"]
-    	@states = response["states"]
-    	@cities = response["cities"]
-    else
-    	token_mismatch
-    end
+		location_data_for_populate
 	end
 
 	def create				
@@ -42,6 +34,19 @@ class LocationsController < ApplicationController
 
 	private
 	
+	def location_data_for_populate
+		response=HTTParty.get(API_HOST+"/locations/new",{:body=>JSON.parse({:access_token => "#{session[:access_token]}"}.to_json)})	
+		response = JSON.parse(response.body)    		
+		if response["status"] == "success" 
+			@addresses = response["addresses"]
+			@countries = response["countries"]
+			@states = response["states"]
+			@cities = response["cities"]
+		else
+			token_mismatch
+		end
+	end
+
 	def token_mismatch
 		reset_session
 		flash[:notice] = APP_MESSAGE["token_mismatch"]   		
