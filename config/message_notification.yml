@@ -1,5 +1,6 @@
 sign_in_failed: "Username or Password is incorrect"
 location_success: "Location added successfully"
 associate_id_issue: "Associate ID should be a number"
+token_mismatch: "Access token mismatched"
 
 

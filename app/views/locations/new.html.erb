@@ -33,5 +33,10 @@
 		$('#country').typeahead({source: <%=raw @countries %>});
 		$('#state').typeahead({source: <%=raw @states %>});
 		$('#city').typeahead({source: <%=raw @cities %>});
+
+		$(document).ready(function () {              
+    	form_id = $('form').attr('id');
+    	$("#"+form_id).validate();
+		});
 	</script>
 </div>
