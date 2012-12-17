@@ -1,12 +1,14 @@
 <br/><br/><br/><br/><br/>
 
 <% if associates.present? %>
-<% associates.each do |associate| %>
-<p><%= " #{associate["associate_location"]["end_date"]}"%>
-<%= associate["associate_location"]["associate"]["first_name"]%>
-<%= associate["associate_location"]["location"]["address"]%></p>
-<br/>
-<% end %>
+  <% associates.each do |associate| %>
+    <p><%= " #{associate["associate_location"]["end_date"]}"%>
+    <%= associate["associate_location"]["associate"]["first_name"]%>
+    <%= associate["associate_location"]["location"]["address"]%></p>
+    <br/>
+  <% end %>
+<%else%>
+  <p><%= "No Result Found"%></p>
 <%end%>
 
 
