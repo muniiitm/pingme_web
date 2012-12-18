@@ -5,8 +5,8 @@ class CreateAssociateLocations < ActiveRecord::Migration
       t.integer :location_id
       t.integer :vnet
       t.string :seat_number
-      t.datetime :start_date
-      t.datetime :end_date
+      t.date :start_date
+      t.date :end_date
 
       t.timestamps
     end
