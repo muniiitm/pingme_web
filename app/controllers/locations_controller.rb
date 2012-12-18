@@ -11,8 +11,9 @@ class LocationsController < ApplicationController
 		location_data_for_populate
 	end
 
+
+    # move to intilizers folder in the location.rb file
 	def create				
-    # move to intilizers
     response=HTTParty.post(API_HOST+"/associates/location",{:body=>JSON.parse({:user=>params, :access_token => "#{session[:access_token]}"}.to_json)})
     response = JSON.parse(response.body)            
     if response["status"] == "success"    	
@@ -27,13 +28,13 @@ class LocationsController < ApplicationController
 	end
 
   def search_result
-    response=HTTParty.get(API_HOST+"/locations",{:body=>JSON.parse({:search=>params[:search], :access_token => "#{session[:access_token]}"}.to_json)})
-    response = JSON.parse(response)
+    response = Pingme::Location.search(session[:access_token],params[:search])
     render :partial => "locations/search_result",:locals=>{:associates=>response}
   end
 
 	private
 	
+    # move to intilizers folder in the location.rb file
 	def location_data_for_populate
 		response=HTTParty.get(API_HOST+"/locations/new",{:body=>JSON.parse({:access_token => "#{session[:access_token]}"}.to_json)})	
 		response = JSON.parse(response.body)    		
