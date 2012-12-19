@@ -17,3 +17,9 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+$(document).ready(function () {               
+  form_id = $('form').attr('id');
+  $("#"+form_id).validate({ errorPlacement: function (error, element) {
+          element.css('background', '#ff575a');            
+	}});
+});

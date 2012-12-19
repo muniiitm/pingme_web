@@ -54,8 +54,8 @@
           <div class="container-fluid nav-collapse">          
             <ul class="nav"> 
               <li><%= link_to "Add Location", new_location_path  %></li>
-              <li><%= link_to "Search", ""  %></li>
-              <li><%= link_to "Google Map", ""  %></li>
+              <li><%= link_to "Search", locations_path  %></li>
+              <li><%= link_to "Google Map", reports_google_map_path  %></li>
             </ul>
             <% if session[:access_token] %>
               <ul class="nav" style="float:right;">   

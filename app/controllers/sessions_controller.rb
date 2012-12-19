@@ -6,10 +6,8 @@ class SessionsController < ApplicationController
 
 	def create    
     value=Base64.encode64("#{params[:user_id]} #{params[:password]}")
-    # move to intilizers
-    response=HTTParty.post(API_HOST+"/users/sign_in",{:body=>JSON.parse({:user=>value}.to_json)})
-    response = JSON.parse(response.body)        
-
+    response = Pingme::Session.create(value) 
+    
     if response["status"] == "success"
       session[:user_id] = response["user"]["associate"]["user_id"]
       session[:access_token] = response["access_token"]

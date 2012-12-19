@@ -11,11 +11,8 @@ class LocationsController < ApplicationController
 		location_data_for_populate
 	end
 
-
-    # move to intilizers folder in the location.rb file
-	def create				
-    response=HTTParty.post(API_HOST+"/associates/location",{:body=>JSON.parse({:user=>params, :access_token => "#{session[:access_token]}"}.to_json)})
-    response = JSON.parse(response.body)            
+	def create				    
+    response = Pingme::Location.create(session[:access_token],params)    
     if response["status"] == "success"    	
 	    flash[:notice] = APP_MESSAGE["location_success"] 
 	    redirect_to new_location_path
@@ -33,11 +30,9 @@ class LocationsController < ApplicationController
   end
 
 	private
-	
-    # move to intilizers folder in the location.rb file
-	def location_data_for_populate
-		response=HTTParty.get(API_HOST+"/locations/new",{:body=>JSON.parse({:access_token => "#{session[:access_token]}"}.to_json)})	
-		response = JSON.parse(response.body)    		
+   
+	def location_data_for_populate		
+		response =  Pingme::Location.populate_data(session[:access_token]) 		
 		if response["status"] == "success" 
 			@addresses = response["addresses"]
 			@countries = response["countries"]
