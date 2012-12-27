@@ -1,13 +1,25 @@
-<%= form_tag sessions_path, :name => "associate_login_frm", :id => "associate_login_frm", :method => "post" do %>
-<p>
-<%= text_field_tag "user_id", "", :placeholder => "Associate ID", :class => "required"%>
-<span id="username_warning" style="color:red"></span> 
-<%= password_field_tag "password", "", :placeholder => "Password", :class => "required" %>
-<span id="password_warning" style="color:red"></span>
-</p>
-
-<p> <%= check_box_tag "agree" %> Agree to pull my information from Cognizant system <p>
-
-<p> <%= submit_tag "Let me USE!", :type => "submit" %> <%= submit_tag "I am not READY!", :type => "reset" %> <p>
-
-<% end %>
+<div class="well login-section">
+  <div class="login-form">      
+    <%= form_tag sessions_path, :name => "associate_login_frm", :id => "associate_login_frm", :method => "post" do %>
+      <fieldset>
+        <legend>Login</legend>
+        <div>
+          <%= text_field_tag "user_id", "", :placeholder => "Associate ID", :class => "required" %>
+        </div>        
+        <div>
+          <%= password_field_tag "password", "", :placeholder => "Password", :class => "required" %>
+        </div>
+        <div class="agree-box">
+          <%= check_box_tag "agree" %> Agree to pull my information from Cognizant system
+        </div>
+        <div>
+          <%= submit_tag "Let me USE!", :type => "submit", :class => "btn primary" %> 
+          <%= submit_tag "I am not READY!", :type => "reset", :class => "btn primary" %>        
+        </div>     
+        <div class="login-footer-status">
+          PS: <%= total_associates %> Associates from Cognizant is using this application! We don't capture any of your personal information. Feel free to contact us @ developers@pingme.com
+        </div>
+      </fieldset>
+    <% end %>    
+  </div>
+</div><!--/.well -->

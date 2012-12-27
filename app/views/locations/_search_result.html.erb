@@ -1,11 +1,18 @@
-<br/><br/><br/><br/><br/>
-
 <% if associates.present? %>
-  <% associates.each do |associate| %>
-    <p><%= " #{associate["associate_location"]["end_date"]}"%>
-    <%= associate["associate_location"]["associate"]["first_name"]%>
-    <%= associate["associate_location"]["location"]["address"]%></p>
-    <br/>
+	<div> Found <%= associates.count %> Associates </div>
+  <% associates.each_slice(3) do |associate| %>
+  	<div class="row-fluid">	
+  	<% associate.each do |asso| %>
+  		<div class="span2">
+				<%= image_tag "/assets/flowers-150x150.jpg", :alt => "PP" %>
+			</div> 
+			<div class="span2">
+		    <div><%= "#{asso["associate_location"]["end_date"]}" %></div>
+		    <div><%= asso["associate_location"]["associate"]["first_name"]%></div>
+		    <div><%= asso["associate_location"]["location"]["address"]%></div>    
+		  </div>
+    <% end %>
+  	</div>
   <% end %>
 <%else%>
   <p><%= "No Result Found"%></p>

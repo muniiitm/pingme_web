@@ -18,8 +18,15 @@
 //= require_tree .
 
 $(document).ready(function () {               
-  form_id = $('form').attr('id');
-  $("#"+form_id).validate({ errorPlacement: function (error, element) {
-          element.css('background', '#ff575a');            
-	}});
+	form_id = $('form').attr('id');
+		$("#"+form_id).validate({ 
+			messages: {
+				user_id: "Associate id should not be blank",
+				password: "Password should not be blank",				
+			}, 		
+			errorElement: "span",
+			errorPlacement: function (error, element) {  	 	
+				error.appendTo( element.parent() );
+			}
+	});
 });
