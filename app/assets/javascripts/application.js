@@ -15,6 +15,7 @@
 //= require jquery.validate
 //= require bootstrap-typeahead
 //= require twitter/bootstrap
+//= require heat_map
 //= require_tree .
 
 $(document).ready(function () {               

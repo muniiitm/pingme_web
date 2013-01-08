@@ -17,7 +17,7 @@
           <%= submit_tag "I am not READY!", :type => "reset", :class => "btn primary" %>        
         </div>     
         <div class="login-footer-status">
-          PS: <%= total_associates %> Associates from Cognizant is using this application! We don't capture any of your personal information. Feel free to contact us @ developers@pingme.com
+          PS: <%= session[:total_associates] %> Associates from Cognizant is using this application! We don't capture any of your personal information. Feel free to contact us @ developers@pingme.com
         </div>
       </fieldset>
     <% end %>    

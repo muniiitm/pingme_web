@@ -42,10 +42,5 @@ class LocationsController < ApplicationController
 			token_mismatch
 		end
 	end
-
-	def token_mismatch
-		reset_session
-		flash[:notice] = APP_MESSAGE["token_mismatch"]   		
-		redirect_to new_sessions_path
-	end	
+	
 end

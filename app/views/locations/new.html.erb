@@ -1,6 +1,5 @@
 <div id="location-creation">
 	<%= form_tag locations_path, :id => "associate_location_frm", :name => "associate_location_frm" do %>
-				<div>Where are you GOING Today? We find associates in your location exclusively for YOU!</div>
 			
 				<div>
 					<%= text_field_tag "country", "", :placeholder => "Country", :class => "required" %>
@@ -9,7 +8,7 @@
 					<%= text_field_tag "location", "", :placeholder => "Location", :class => "required" %>
 					<span> Could not find location? </span>
 				</div>
-
+				
 				<div class="row-fluid">
 					<div class="span9">
 						<div>

@@ -11,7 +11,13 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-  	redirect_to new_sessions_path unless current_user
+  	redirect_to new_sessions_path unless session[:access_token]
   end
 
+  def token_mismatch
+    reset_session
+    flash[:notice] = APP_MESSAGE["token_mismatch"]      
+    redirect_to new_sessions_path
+  end 
+  
 end

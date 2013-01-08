@@ -1,0 +1,14 @@
+
+#map {
+  width: 800px;
+  height: 478px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+#lightbox {
+  width: 800px;
+  height: 480px;
+  background-color: #ffffff;
+  opacity: 0.8;
+}

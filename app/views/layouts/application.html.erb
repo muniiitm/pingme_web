@@ -13,7 +13,6 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= stylesheet_link_tag 'gmaps4rails' %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -33,7 +32,7 @@
 
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
-    <%= favicon_link_tag 'images/favicon.ico', :rel => 'shortcut icon' %>
+    <%# favicon_link_tag 'images/favicon.ico', :rel => 'shortcut icon' %>
 
    <!-- Javascripts
     ================================================== -->
@@ -56,11 +55,11 @@
               <li><%= link_to "Add Location", new_location_path  %></li>
               <li><%= link_to "Search", locations_path  %></li>
               <li><%= link_to "Google Map", reports_google_map_path  %></li>
-              <li><%= link_to "Heat Map", '' %></li>
+              <li><%= link_to "Heat Map", reports_heat_map_path %></li>
             </ul>
             <% if session[:access_token] %>
               <ul class="nav" style="float:right;">   
-                <li><%= link_to_function "Welcome Mr. #{session[:user_id]}", "" %></li>
+                <li><%= link_to_function "Welcome Mr. #{session[:associate_name]}", "" %></li>
                 <li><%= link_to "Sign Out", sessions_sign_out_path %></li>
               </ul>
             <% end %>              

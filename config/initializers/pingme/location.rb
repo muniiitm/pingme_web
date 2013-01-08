@@ -17,14 +17,28 @@ module Pingme
       	response=HTTParty.get(API_HOST+"/locations/new",{:body=>JSON.parse({:access_token => access_token}.to_json)})	
 				response = JSON.parse(response)   
       end
+
+      def latitude_and_longitude(access_token)
+        response=HTTParty.get(API_HOST+"/locations/latitude_and_longitude",{:body=>JSON.parse({:access_token => access_token}.to_json)}) 
+        response = JSON.parse(response)
+      end
     end
   end
 
-   class Session
+  class Associate
+    class<<self
+      def total
+        response=HTTParty.get(API_HOST+"/associate/total") 
+        response = JSON.parse(response) 
+      end
+    end
+  end
+
+  class Session
     class<<self
     	def create(params_data)
-				response=HTTParty.post(API_HOST+"/users/sign_in",{:body=>JSON.parse({:user=>params_data}.to_json)})
-				response = JSON.parse(response)       	
+    		response=HTTParty.post(API_HOST+"/users/sign_in",{:body=>JSON.parse({:user=>params_data}.to_json)})
+    		response = JSON.parse(response)       	
     	end
     end
   end
