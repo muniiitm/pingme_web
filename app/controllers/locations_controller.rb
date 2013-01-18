@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-	before_filter :authenticate
+	before_filter :authenticate,:except=>['home']
 	respond_to :json, :html
 
 	def index 		
@@ -29,6 +29,8 @@ class LocationsController < ApplicationController
     render :partial => "locations/search_result",:locals=>{:associates=>response}
   end
 
+  def home
+  end
 	private
    
 	def location_data_for_populate		
