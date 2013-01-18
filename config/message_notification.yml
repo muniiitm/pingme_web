@@ -1,3 +1,4 @@
+sign_in_success: "Login Success"
 sign_in_failed: "Username or Password is incorrect"
 location_success: "Location added successfully"
 associate_id_issue: "Associate ID should be a number"

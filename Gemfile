@@ -42,10 +42,14 @@ gem 'net-ldap'
 
 # To use debugger
 # gem 'debugger'
+
+group :development, :test do
+  gem 'rspec-rails'      
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 group :test do
-	  gem 'rspec-rails'
-	  gem 'cucumber-rails'
-    gem 'cucumber'
-	  gem 'capybara'
-	  gem 'database_cleaner'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber'
 end
