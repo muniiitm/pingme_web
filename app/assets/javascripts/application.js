@@ -16,17 +16,21 @@
 //= require bootstrap-typeahead
 //= require twitter/bootstrap
 //= require heat_map
-//= require_tree 
+//= require_tree
 
-$(document).ready(function () {               
+$(document).ready(function () {
+
+	// auto hide flash messages
+	$("div[id^='flash_']").fadeOut(4000);
+
 	form_id = $('form').attr('id');
-		$("#"+form_id).validate({ 
+		$("#"+form_id).validate({
 			messages: {
 				user_id: "Associate id should not be blank",
-				password: "Password should not be blank",				
-			}, 		
+				password: "Password should not be blank",
+			},
 			errorElement: "span",
-			errorPlacement: function (error, element) {  	 	
+			errorPlacement: function (error, element) {
 				error.appendTo( element.parent() );
 			}
 	});

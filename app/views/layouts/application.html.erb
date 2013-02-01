@@ -47,36 +47,44 @@
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>            
+            <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/">PingmeWeb</a>
-          <div class="container-fluid nav-collapse">          
-            <ul class="nav"> 
-              <li><%= link_to "Add Location", new_location_path  %></li>
-              <li><%= link_to "Search", locations_path  %></li>
-              <li><%= link_to "Google Map", reports_google_map_path  %></li>
-              <li><%= link_to "Heat Map", reports_heat_map_path %></li>
-            </ul>
+          <div class="container-fluid nav-collapse">
             <% if session[:access_token] %>
-              <ul class="nav" style="float:right;">   
+              <ul class="nav">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Add Location", new_location_path  %></li>
+                <li><%= link_to "Search", locations_path  %></li>
+                <li><%= link_to "Google Map", reports_google_map_path  %></li>
+                <li><%= link_to "Heat Map", reports_heat_map_path %></li>
+              </ul>
+
+              <ul class="nav" style="float:right;">
                 <li><%= link_to_function "Welcome Mr. #{session[:associate_name]}", "" %></li>
                 <li><%= link_to "Sign Out", sessions_sign_out_path %></li>
               </ul>
-            <% end %>              
+            <% else %>
+              <ul class="nav" style="float:right;">
+                <li><%= link_to "Singin", new_sessions_path %></li>
+              </ul>
+            <% end %>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">      
-        <div class="span12">          
-          <%= bootstrap_flash %>          
+      <div class="row-fluid">
+        <div class="span12">
+          <div id='flash_'>
+            <%= bootstrap_flash %>
+          </div>
           <%= yield %>
-          <%= yield :scripts %>      
+          <%= yield :scripts %>
         </div>
       </div><!--/row-->
-      
+
       <div class="navbar navbar-fixed-bottom">
         <div id="footer">
         &copy; Company 2012</div>
